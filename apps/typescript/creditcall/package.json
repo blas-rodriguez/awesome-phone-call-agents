@@ -7,7 +7,7 @@
   "scripts": {
     "demo": "node src/cli.mjs demo",
     "plan": "node src/cli.mjs plan",
-    "run": "node src/cli.mjs run",
+    "run": "node init && node src/cli.mjs run",
     "status": "node src/cli.mjs status",
     "recover": "node src/cli.mjs recover",
     "test": "node --test"

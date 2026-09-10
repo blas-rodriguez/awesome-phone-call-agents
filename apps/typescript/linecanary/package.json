@@ -9,7 +9,7 @@
     "test": "node --import tsx --test test/*.test.ts",
     "demo": "tsx demo/run-local.ts",
     "cli": "tsx src/cli.ts",
-    "start": "sh deploy/start.sh"
+    "start": "node init && sh deploy/start.sh"
   },
   "engines": {
     "node": ">=22"

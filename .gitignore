@@ -1,6 +1,4 @@
 .DS_Store
-.env
-.env.*
 !.env.example
 *.log
 __pycache__/
@@ -28,3 +26,7 @@ skills-lock.json
 **/.call-locks/
 docs/codex-implementation-plan.md
 docs/superpowers/
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat

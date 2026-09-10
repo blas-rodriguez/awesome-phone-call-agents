@@ -9,15 +9,15 @@
     "node": ">=20.11"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
     "verify:live": "bash scripts/verify-live.sh",
-    "build:scheduler": "node scripts/build-scheduler.mjs",
+    "build:scheduler": "node init && node scripts/build-scheduler.mjs",
     "scheduler": "node dist-scheduler/scheduler.js",
     "check": "pnpm typecheck && pnpm lint && pnpm test"
   },

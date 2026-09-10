@@ -6,10 +6,10 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "vinext dev",
-    "build": "vinext build",
-    "build:vercel": "vite build",
-    "start": "vinext start",
+    "dev": "node init && vinext dev",
+    "build": "node init && vinext build",
+    "build:vercel": "node init && vite build",
+    "start": "node init && vinext start",
     "check": "npm test && npm run lint",
     "test": "npm run build && node --test tests/rendered-html.test.mjs && npm run test:contracts",
     "test:contracts": "node --experimental-strip-types --test tests/*.test.ts",

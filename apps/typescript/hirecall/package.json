@@ -5,9 +5,9 @@
   "description": "Recruiter screening desk: upload a candidate spreadsheet, keep rows in SQLite, and (later) screen by CALL-E phone call.",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "typecheck": "tsc --noEmit",
     "generate-template": "node scripts/generate-template.mjs"
   },
