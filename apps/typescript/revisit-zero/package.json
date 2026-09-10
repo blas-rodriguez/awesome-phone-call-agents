@@ -7,16 +7,16 @@
     "node": ">=20.19.0"
   },
   "scripts": {
-    "build": "npm run build:server && npm run build:ui",
-    "build:server": "tsc -p tsconfig.json",
-    "build:ui": "vite build",
+    "build": "node init && npm run build:server && npm run build:ui",
+    "build:server": "node init && tsc -p tsconfig.json",
+    "build:ui": "node init && vite build",
     "check": "tsc -p tsconfig.json --noEmit",
-    "dev": "vite",
+    "dev": "node init && vite",
     "test": "vitest run",
     "test:watch": "vitest",
     "demo": "node --import tsx demo/run-demo.ts",
-    "start": "node --import tsx src/server.ts",
-    "start:prod": "node dist/src/server.js"
+    "start": "node init && node --import tsx src/server.ts",
+    "start:prod": "node init && node dist/src/server.js"
   },
   "dependencies": {
     "@call-e/calle": "0.2.2",

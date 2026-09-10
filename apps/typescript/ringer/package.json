@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "dev:api": "tsx scripts/dev-api.mjs",
-    "build": "tsc -b && vite build",
+    "dev": "node init && vite",
+    "dev:api": "node init && tsx scripts/dev-api.mjs",
+    "build": "node init && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
     "typecheck:api": "tsc -p api/tsconfig.json",

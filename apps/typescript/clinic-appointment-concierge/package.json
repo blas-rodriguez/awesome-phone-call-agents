@@ -7,7 +7,7 @@
     "clinic-appointment-concierge": "./appointment-concierge.js"
   },
   "scripts": {
-    "start": "node appointment-concierge.js"
+    "start": "node init && node appointment-concierge.js"
   },
   "engines": {
     "node": ">=18.0.0"

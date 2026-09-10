@@ -3,20 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "AI receptionist that keeps a service business's calendar full: confirms appointments, backfills freed slots from a priority waitlist, and qualifies new leads — all over real CALL-E phone calls.",
+  "description": "AI receptionist that keeps a service business's calendar full: confirms appointments, backfills freed slots from a priority waitlist, and qualifies new leads \u2014 all over real CALL-E phone calls.",
   "scripts": {
     "check": "tsc --noEmit",
     "pretest": "node --env-file=test/test.env test/migrate.mjs",
     "test": "node --env-file=test/test.env --import tsx --test --test-concurrency=1 test/*.test.ts",
-    "dev": "node --env-file-if-exists=.env --import tsx --watch src/server.ts",
-    "start": "node --env-file-if-exists=.env --import tsx src/server.ts",
+    "dev": "node init && node --env-file-if-exists=.env --import tsx --watch src/server.ts",
+    "start": "node init && node --env-file-if-exists=.env --import tsx src/server.ts",
     "db:migrate": "prisma migrate dev",
     "db:seed": "prisma db seed",
     "db:reset": "prisma migrate reset --force",
     "hello-call": "node --env-file-if-exists=.env --import tsx scripts/call-hello-world.ts",
     "web:dev": "npm --prefix web run dev",
     "web:build": "npm --prefix web run build",
-    "build": "npm --prefix web run build && tsc --noEmit"
+    "build": "node init && npm --prefix web run build && tsc --noEmit"
   },
   "prisma": {
     "seed": "node --import tsx prisma/seed.ts"

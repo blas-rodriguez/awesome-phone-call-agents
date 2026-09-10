@@ -9,11 +9,11 @@
     "node": ">=24 <25"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "build:public-demo": "node scripts/verify-public-demo-environment.mjs && next build",
-    "build:verify": "node scripts/run-isolated-build.mjs",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "build:public-demo": "node init && node scripts/verify-public-demo-environment.mjs && next build",
+    "build:verify": "node init && node scripts/run-isolated-build.mjs",
+    "start": "node init && next start",
     "setup:local-demo": "node scripts/setup-local-demo.mjs",
     "db:generate": "drizzle-kit generate",
     "db:check": "drizzle-kit check",

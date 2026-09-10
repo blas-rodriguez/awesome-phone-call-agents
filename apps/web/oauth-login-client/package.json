@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "dev:mock": "concurrently --kill-others-on-fail \"node mock-server/server.mjs\" \"vite --mode mock\"",
-    "build": "tsc && vite build",
+    "dev": "node init && vite",
+    "dev:mock": "node init && concurrently --kill-others-on-fail \"node mock-server/server.mjs\" \"vite --mode mock\"",
+    "build": "node init && tsc && vite build",
     "preview": "vite preview",
     "test:e2e": "playwright test"
   },

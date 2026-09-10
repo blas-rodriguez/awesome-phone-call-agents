@@ -4,9 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun run src/index.ts",
-    "build": "bun build src/index.ts --outfile callsweep",
-    "start": "bun callsweep"
+    "dev": "node init && bun run src/index.ts",
+    "build": "node init && bun build src/index.ts --outfile callsweep",
+    "start": "node init && bun callsweep"
   },
   "devDependencies": {
     "@types/bun": "latest"
